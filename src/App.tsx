@@ -1,7 +1,17 @@
+import Slider from 'react-slick';
 import './App.css'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay:true
+  };
   return (
     <>
       <div>
@@ -15,7 +25,13 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        A react-slick playground.
+        <Slider {...settings}>
+          <div>Slide 1</div>
+          <div>Slide 2</div>
+          <div>Slide 3</div>
+          <div>Slide 4</div>
+          <div>Slide 5</div>
+        </Slider>
       </p>
     </>
   )
